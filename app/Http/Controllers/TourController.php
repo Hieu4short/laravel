@@ -124,7 +124,6 @@ class TourController extends Controller
             return redirect()->route('tour.index')->with('success', 'Tour đã được cập nhật thành công.');
     }
 
-        // Xóa
     public function destroy($id) {
         $tour = Tour::findOrFail($id);
 

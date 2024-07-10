@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\TourController;
+use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
@@ -36,6 +38,7 @@ Route::middleware([
         return Inertia::render('Dashboard');
     })->name('dashboard');
 });
+
 
 Route::get('/tour',[TourController::class,'index'])->name('tour.index');
 Route::get('/tour/create',[TourController::class,'create'])->name('tour.create');
