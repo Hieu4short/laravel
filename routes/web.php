@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\TourController;
+use App\Http\Controllers\BookController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
@@ -46,3 +47,6 @@ Route::post('/tour',[TourController::class,'store'])->name('tour.store');
 Route::get('/tour/{tour}/edit',[TourController::class,'edit'])->name('tour.edit');
 Route::put('/tour/{tour}',[TourController::class,'update'])->name('tour.update');
 Route::delete('/tour/{tour}',[TourController::class,'destroy'])->name('tour.destroy');
+
+Route::get('/book', [BookController::class, 'create'])->name('book.create');
+Route::post('/book', [BookController::class, 'store'])->name('book.store');
